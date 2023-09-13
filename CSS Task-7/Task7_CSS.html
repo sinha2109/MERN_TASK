@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          color: white;
+          /* now bold the font */
+          font-weight: bold;
+          background-color: rgb(235, 39, 98);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        
+        .container {
+            width: 467px;
+            padding: 77px;
+            background-color: rgb(107, 31, 54);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+        
+        label {
+          flex: 1;
+          margin-right: 10px;
+        }
+        
+        .form-control {
+          flex: 3;
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+        }
+        
+        .btn {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            padding: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 20px;
+            font-family: monospace;
+        }
+        
+        
+        .btn:hover {
+          background-color: black;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+
+        <form action="/register" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Your password">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Your phone number">
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female">
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="other" name="gender" value="other">
+              <label for="other">Other</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="language">Language</label>
+            <select class="form-control" id="language" name="language">
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+              <option value="Bhojpuri">Bhojpuri</option>
+              <option value="german">German</option>
+              <option value="chinese">Chinese</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="about">About</label>
+            <textarea class="form-control" id="about" name="about" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn">Register</button>
+        </form>
+      </div>
+</body>
+</html>
